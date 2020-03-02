@@ -264,20 +264,10 @@ def winning_team
   team2_total = 0
   
   game_hash[:home][:players].each do |player, data|
-    #binding.pry
-      #if player == :points
-        #data.each do |point|
-          team1_total += player[:points]
-      #   end
-      # end
+    team1_total += player[:points]
     end
     
   game_hash[:away][:players].each do |player, data|
-      # if player == :points
-      #   data.each do |point|
-      #     team2_total += point
-      #   end
-      # end
       team2_total += player[:points]
     end
     
