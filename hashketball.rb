@@ -280,7 +280,7 @@ def winning_team
     end
   
   if team1_total > team2_total
-    return "Brooklyn Nets",
+    return "Brooklyn Nets"
     else if team1_total < team2_total
     return "Charlotte Hornets"
   end 
