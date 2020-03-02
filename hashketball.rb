@@ -278,6 +278,8 @@ def winning_team
         end
       end
     end
+    
+  binding.pry
   
   if team1_total > team2_total
     return "Brooklyn Nets"
