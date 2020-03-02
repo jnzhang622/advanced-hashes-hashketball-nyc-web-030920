@@ -259,32 +259,32 @@ max_points_player
 end
 
 
-def winning_team
-  team1_total = 0
-  team2_total = 0
+# def winning_team
+#   team1_total = 0
+#   team2_total = 0
   
-  game_hash[:home][:players].each do |attribute, data|
-      if attribute == :points
-        data.each do |point|
-          team1_total += point
-        end
-      end
-    end
+#   game_hash[:home][:players].each do |attribute, data|
+#       if attribute == :points
+#         data.each do |point|
+#           team1_total += point
+#         end
+#       end
+#     end
     
-  game_hash[:away][:players].each do |attribute, data|
-      if attribute == :points
-        data.each do |point|
-          team2_total += point
-        end
-      end
-    end
+#   game_hash[:away][:players].each do |attribute, data|
+#       if attribute == :points
+#         data.each do |point|
+#           team2_total += point
+#         end
+#       end
+#     end
   
-  if team1_total > team2_total
-    return "Brooklyn Nets"
-    else if team1_total < team2_total
-    return "Charlotte Hornets"
-  end 
-end
+#   if team1_total > team2_total
+#     return "Brooklyn Nets"
+#     else if team1_total < team2_total
+#     return "Charlotte Hornets"
+#   end 
+# end
 
 
 def player_with_longest_name
