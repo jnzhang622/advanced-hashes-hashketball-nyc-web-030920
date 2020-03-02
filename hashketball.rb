@@ -273,11 +273,12 @@ def winning_team
     end
     
   game_hash[:away][:players].each do |player, data|
-      if player == :points
-        data.each do |point|
-          team2_total += point
-        end
-      end
+      # if player == :points
+      #   data.each do |point|
+      #     team2_total += point
+      #   end
+      # end
+      team2_total += player[:points]
     end
     
   
