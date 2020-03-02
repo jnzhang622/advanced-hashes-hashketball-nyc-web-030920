@@ -283,6 +283,8 @@ def winning_team
     return "Brooklyn Nets"
     elsif team1_total < team2_total
     return "Charlotte Hornets"
+  else
+    return "we are here"
   end 
 end
 
