@@ -263,21 +263,25 @@ def winning_team
   team1_total = 0
   team2_total = 0
   
-  index = 0
-  while index < game_hash[:home][:players].length do
-    team1_total +=  game_hash[:home][:players][:points]
-    index += 1
-  end
+  game_hash[:home][:players].each do |attribute, data|
+      if attribute == :points
+        data.each do |point|
+          team1_total += point
+        end
+      end
+    end
+    
+  game_hash[:away][:players].each do |attribute, data|
+      if attribute == :points
+        data.each do |point|
+          team2_total += point
+        end
+      end
+    end
   
-  index2 = 0
-  while index2 < game_hash[:away][:players].length do
-    team2_total +=  game_hash[:away][:players][:points]
-    index2 += 1
-  end
-  
-  if team_one_total > team_two_total then
-    return "Brooklyn Nets"
-  else 
+  if team1_total > team2_total do
+    return "Brooklyn Nets",
+    else if team1_total < team2_total do
     return "Charlotte Hornets"
   end 
 end
