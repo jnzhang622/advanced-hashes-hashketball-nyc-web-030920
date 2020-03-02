@@ -264,6 +264,7 @@ def winning_team
   team2_total = 0
   
   game_hash[:home][:players].each do |attribute, data|
+    binding.pry
       if attribute == :points
         data.each do |point|
           team1_total += point
@@ -279,7 +280,6 @@ def winning_team
       end
     end
     
-  binding.pry
   
   if team1_total > team2_total
     return "Brooklyn Nets"
