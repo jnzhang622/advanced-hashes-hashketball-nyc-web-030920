@@ -265,9 +265,9 @@ def winning_team
   
   game_hash[:home][:players].each do |player, data|
     binding.pry
-      if player == :points
-        data.each do |point|
-          team1_total += point
+      #if player == :points
+        #data.each do |point|
+          team1_total += player[:points]
         end
       end
     end
